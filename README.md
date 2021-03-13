@@ -1,21 +1,22 @@
-#ENDPOINT METRICS COLLECTOR
+# ENDPOINT METRICS COLLECTOR
 
 The above project is designed to poll endpoints and produce prometheus formatted metrics.
 
 It produces the endpoint URL is up or down based on the status code and also the response time for the same.
 
-##Installation instructions
+## Installation instructions
 
 ### Docker Based Image build from Source
 
     `docker build -t <imagename>:<tag> vmware/`
 
-##Kubernetes deployment
-###Pre-requisites
+## Kubernetes deployment
+### Pre-requisites
 For Kubernetes based installation
 1. kubernetes 1.16+ version
 
-####Instruction:
+### Instruction
+
 Apply the Manifest
 
     `kubectl apply -f k8s_manifests/metrics_collector -n <namespace>`
@@ -24,11 +25,11 @@ Verify that all pods are up and running
 
     `kubectl get po -n <namespace>`
 
-####Prometheus deployment instructions
+#### Prometheus deployment instructions
 
     `kubectl apply -f k8s_manifests/prometheus`
 
-####Grafana deployment instructions
+#### Grafana deployment instructions
     `kubectl create deployment grafana -n monitoring --image=docker.io/grafana/grafana:latest`
     `kubectl -n monitoring expose deployment grafana --type="NodePort" --port 3000`
 
