@@ -1,0 +1,10 @@
+metricsPath: "/metrics"
+metricsPort: "8080"
+HttpEndpointConfigs:
+  - BaseURL: "httpstat.us"
+    Scheme: "https"
+    Timeout: 10
+    Paths:
+      - "200"
+      - "503"
+
