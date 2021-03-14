@@ -49,6 +49,6 @@ Once the grafana UI is up and running,
 3. Import the Dashboard located in k8s_manifest/grafana/dashboards
     ![dashboard](snapshots/import_dashboard.PNG)
 
-4. Once imported the dats should be visible on dashboard
+4. Once imported the data should be visible on dashboard
     ![Result](snapshots/dashboard_output.PNG)
 
